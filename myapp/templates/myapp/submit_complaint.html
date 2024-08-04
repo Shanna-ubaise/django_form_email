@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Complaint</title>
+</head>
+<body>
+    <h1>Submit Complaint</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="product_name">Product Name:</label>
+        <input type="text" id="product_name" name="product_name" required><br>
+
+        <label for="purchase_date">Purchase Date:</label>
+        <input type="date" id="purchase_date" name="purchase_date" required><br>
+
+        <label for="complaint_details">Complaint Details:</label>
+        <textarea id="complaint_details" name="complaint_details" required></textarea><br>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+</body>
+</html>
